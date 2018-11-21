@@ -5,11 +5,13 @@ var artistID = '';
 $('#getAlbums').on("click", getArtist)
 
 
-function getArtist(){
+function getArtist(e){
+    e.preventDefault();
 
 var artistSearch = $("#artist-name").val();
 $.ajax({
     method: "GET",
+    dataType: "json",
     data: {
         apikey:"58bdb166636ac0d28780a0fbb30f6652",
         q_artist: artistSearch,
