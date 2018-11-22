@@ -16,7 +16,7 @@ $.ajax({
     data: {
         apikey:"58bdb166636ac0d28780a0fbb30f6652",
         q_artist: "u2",
-        format:"json",
+        format:"jsonp",
         callback:"jsonp_callback"
     },
     url: "https://api.musixmatch.com/ws/1.1/artist.search",
