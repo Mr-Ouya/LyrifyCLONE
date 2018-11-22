@@ -11,16 +11,16 @@ function getArtist(e){
 var artistSearch = $("#artist-name").val();
 $.ajax({
     method: "GET",
-    dataType: "json",
+    dataType: "jsonp",
     contentType: 'application/json',
     data: {
         apikey:"58bdb166636ac0d28780a0fbb30f6652",
-        q_artist: artistSearch,
-        format:"json"
-        
+        q_artist: "u2",
+        format:"json",
+        callback:"jsonp_callback"
     },
-    url: "https://api.musixmatch.com/ws/1.1/artist.search"
-   
+    url: "https://api.musixmatch.com/ws/1.1/artist.search",
+    jsonpCallback: 'jsonp_callback'
 
 
 })
